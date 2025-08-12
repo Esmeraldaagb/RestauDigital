@@ -1,6 +1,26 @@
 'use client';
 
 import { create } from 'zustand';
+import img1 from "@/assets/jollof.jpeg"
+import img2 from "@/assets/banane.jpeg"
+import img3 from "@/assets/bissap.jpeg"
+import img4 from "@/assets/eau.jpeg"
+import img5 from "@/assets/atcheke.jpeg"
+import img6 from "@/assets/pooulet.jpeg"
+import img7 from "@/assets/bolognaise.jpeg"
+import img8 from "@/assets/legume.jpeg"
+import img9 from "@/assets/gombo.jpeg"
+import img10 from "@/assets/saucet.jpeg"
+import img11 from "@/assets/chawarma.jpeg"
+import img12 from "@/assets/burger.jpeg"
+import img13 from "@/assets/nouilles.jpeg"
+import img14 from "@/assets/pilon.jpeg"
+import img15 from "@/assets/mangue.jpeg"
+import img16 from "@/assets/pasteque.jpeg"
+import img17 from "@/assets/ananas.jpeg"
+import img18 from "@/assets/gingembre.jpeg"
+
+import type { StaticImageData } from 'next/image';
 
 export interface MenuItem {
   id: string;
@@ -8,7 +28,7 @@ export interface MenuItem {
   description: string;
   price: number;
   category: string;
-  image: string;
+  image: string | StaticImageData;
   available: boolean;
   customizations?: string[];
 }
@@ -64,8 +84,8 @@ const sampleMenu: MenuItem[] = [
     name: 'Poulet Braisé',
     description: 'Poulet grillé avec épices locales, servi avec attiéké',
     price: 2500,
-    category: 'Plats Principaux',
-    image: 'https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg',
+    category: 'Plats principaux',
+    image: img6,
     available: true,
     customizations: ['Épices douces', 'Épices piquantes', 'Sans piment']
   },
@@ -74,8 +94,8 @@ const sampleMenu: MenuItem[] = [
     name: 'Riz Jollof',
     description: 'Riz parfumé aux tomates et épices, avec viande ou poisson',
     price: 2000,
-    category: 'Plats Principaux',
-    image: 'https://images.pexels.com/photos/2253643/pexels-photo-2253643.jpeg',
+    category: 'Plats principaux',
+    image: img1,
     available: true,
     customizations: ['Avec viande', 'Avec poisson', 'Végétarien']
   },
@@ -84,8 +104,8 @@ const sampleMenu: MenuItem[] = [
     name: 'Attiéké Poisson',
     description: 'Attiéké traditionnel avec poisson grillé et sauce tomate',
     price: 2200,
-    category: 'Plats Principaux',
-    image: 'https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg',
+    category: 'Plats principaux',
+    image: img5,
     available: true,
     customizations: ['Poisson entier', 'Filets', 'Sauce à part']
   },
@@ -95,7 +115,7 @@ const sampleMenu: MenuItem[] = [
     description: 'Jus naturel de fleurs d\'hibiscus, rafraîchissant',
     price: 500,
     category: 'Boissons',
-    image: 'https://images.pexels.com/photos/1346155/pexels-photo-1346155.jpeg',
+    image: img3,
     available: true,
     customizations: ['Avec gingembre', 'Sans sucre', 'Très sucré']
   },
@@ -105,7 +125,7 @@ const sampleMenu: MenuItem[] = [
     description: 'Eau minérale fraîche 1.5L',
     price: 300,
     category: 'Boissons',
-    image: 'https://images.pexels.com/photos/1557979/pexels-photo-1557979.jpeg',
+    image: img4,
     available: true
   },
   {
@@ -114,10 +134,134 @@ const sampleMenu: MenuItem[] = [
     description: 'Bananes plantains frites, croustillantes',
     price: 800,
     category: 'Accompagnements',
-    image: 'https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg',
+    image:img2,
     available: true,
     customizations: ['Bien cuites', 'Moyennement cuites']
-  }
+  },
+   {
+    id: '7',
+    name: 'Bolognaise fromage',
+    description: 'Bolognaise avec du fromage fondu',
+    price: 800,
+    category: 'Plats principaux',
+    image:img7,
+    available: true,
+    customizations: ['Sans fromages', 'Bien pimenté','Sans piment']
+  }, {
+    id: '8',
+    name: 'Sauce Légume',
+    description: 'Sauce Légume tchayo & akassa',
+    price: 3000,
+    category: 'Plats principaux',
+    image:img8,
+    available: true,
+    customizations: ['Moins dhuile', 'Sans peau de vache',"Sans poisson","Avec huile rouge"]
+  }, {
+    id: '9',
+    name: 'Sauce gombo',
+    description: 'Gombo 4 pièces',
+    price: 3000,
+    category: 'Plats principaux',
+    image:img9,
+    available: true,
+        customizations: ['Moins dhuile', 'Sans peau de vache',"Sans poisson","Avec huile rouge","Sans gambas"]
+
+  }, 
+  {
+    id: '10',
+    name: 'Sauce riz',
+    description: 'Riz sauce tomate',
+    price: 2000,
+    category: 'Plats principaux',
+    image:img10,
+    available: true,
+    customizations: ['Poisson', 'Fromage',"Oeuf","Saucisse","Sans piment"]
+  }, 
+  {
+    id: '11',
+    name: 'Chawarma viande',
+    description: 'Charwama algérienne +viande',
+    price: 1500,
+    category: 'Fast-food',
+    image:img11,
+    available: true,
+    customizations: ['Poulet', 'Boeuf',"Piment","Sans piment"]
+  },
+   {
+    id: '12',
+    name: 'Burger',
+    description: 'Burger deux fromages',
+    price: 2500,
+    category: 'Fast-food',
+    image:img12,
+    available: true,
+    customizations: ['Poulet', 'Boeuf',"Piment","Sans piment","Cheddar","Frite","Sans frite"]
+
+  },
+
+     {
+    id: '13',
+    name: 'Nouilles',
+    description: 'Spaghetti viande',
+    price: 2500,
+    category: 'Plats principaux',
+    image:img13,
+    available: true,
+    customizations: ['Poulet', 'Boeuf',"Piment","Sans piment",]
+
+  },
+ {
+    id: '14',
+    name: 'Pilon',
+    description: 'Pilon de poulet braisé',
+    price: 2000,
+    category: 'Accompagnements',
+    image:img14,
+    available: true,
+    customizations: ['Bien cuites', 'Moyennement cuites',"Piment","Sans piment"]
+  },
+
+   {
+    id: '15',
+    name: 'Jus mangue',
+    description: 'Jus de mangue 0.5cl',
+    price: 2000,
+    category: 'Boissons',
+    image:img15,
+    available: true,
+   customizations: ['Bien sucré', 'Sans sucre']
+  }, {
+    id: '16',
+    name: 'Jus pastèque',
+    description: 'Jus de pastèque 0.5cl',
+    price: 2000,
+    category: 'Boissons',
+    image:img16,
+    available: true,
+   customizations: ['Bien sucré', 'Sans sucre']
+  }, 
+  {
+    id: '17',
+    name: 'Jus ananas',
+    description: 'Jus ananas 0.5cl',
+    price: 2000,
+    category: 'Boissons',
+    image:img17,
+    available: true,
+    customizations: ['Bien sucré', 'Sans sucre']
+  },
+   {
+    id: '18',
+    name: 'Jus gingembre',
+    description: 'Jus gingembre 0.5cl',
+    price: 2000,
+    category: 'Boissons',
+    image:img18,
+    available: true,
+    customizations: ['Bien sucré', 'Sans sucre']
+  },
+  
+
 ];
 
 // Sample orders for demo

@@ -21,7 +21,7 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {/* Client Interface */}
-          <Link href="/table/table-1" className="group">
+          {/* <Link href="/table/table-1" className="group">
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-green-200 transition-colors">
                 <QrCode className="w-8 h-8 text-green-600" />
@@ -32,10 +32,10 @@ export default function Home() {
                 Table 1 (Demo) →
               </div>
             </div>
-          </Link>
+          </Link> */}
 
           {/* Gestionnaire Dashboard */}
-          <Link href="/manager" className="group">
+          <Link href="/proprio/manager" className="group">
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-200 transition-colors">
                 <BarChart3 className="w-8 h-8 text-blue-600" />
@@ -63,7 +63,7 @@ export default function Home() {
           </Link>
 
           {/* Demo Tables */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
+          {/* <div className="bg-white rounded-2xl p-8 shadow-lg">
             <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
               <QrCode className="w-8 h-8 text-orange-600" />
             </div>
@@ -82,14 +82,10 @@ export default function Home() {
                 • Table 4
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
 
-        <div className="text-center mt-16">
-          <p className="text-gray-500">
-            Système développé avec Next.js, Tailwind CSS et TypeScript
-          </p>
-        </div>
+
       </div>
     </div>
   );
