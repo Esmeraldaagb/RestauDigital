@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Activity, ShoppingBag, Users } from "lucide-react";
 import { TabsContent } from "@/components/ui/tabs";
 
-export default function OverviewTabs({ orders }) {
+export default function OverviewTabs({ orders }: { orders: any[] }) {
   return (
     <TabsContent value="overview" className="space-y-8 animate-fade-in">
       {/* Activité Récente */}
