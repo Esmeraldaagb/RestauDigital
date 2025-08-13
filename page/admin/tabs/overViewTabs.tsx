@@ -16,7 +16,7 @@ export default function OverviewTabs({ orders }) {
         </CardHeader>
         <CardContent className="p-0">
           <div>
-            {orders.slice(0, 5).map((order, index) => (
+            {orders.slice(0, 5).map((order:any, index:any) => (
               <div
                 key={order.id}
                 className={`flex justify-between items-center p-8 hover:bg-gradient-to-r hover:from-orange-50/50 hover:to-indigo-50/50 transition-all duration-500 hover:scale-[1.02] ${index !== orders.slice(0, 5).length - 1 ? 'border-b border-gray-100' : ''}`}

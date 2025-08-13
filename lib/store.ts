@@ -93,6 +93,7 @@ interface RestaurantStore {
   todayRevenue: number;
   monthRevenue: number;
   totalOrders: number;
+  updateRevenue: () => void;
   
   // Actions
   setCurrentTable: (tableId: string) => void;
@@ -466,11 +467,15 @@ export const useRestaurantStore = create<RestaurantStore>((set, get) => ({
     });
   },
 
-  removeFromOrder: (itemId) => {
-    set((state) => ({
-      currentOrder: state.currentOrder.filter((_, index) => index.toString() !== itemId)
-    }));
-  },
+// ...existing code...
+
+removeFromOrder: (itemId) => {
+  set((state) => ({
+    currentOrder: state.currentOrder.filter(item => item.id !== itemId)
+  }));
+},
+
+// ...existing code...
 
   clearOrder: () => set({ currentOrder: [] }),
 
