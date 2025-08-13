@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function App() {
   const [showPassword, setShowPassword] = useState(false);
@@ -56,9 +57,11 @@ function App() {
             {/* Main salad image - superposed */}
             <div className="relative mb-8">
               <div className="w-72 h-72 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center border-4 border-white/30 shadow-2xl">
-                <img 
+                <Image 
                   src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop" 
                   alt="Fresh salad" 
+                  width={96}
+                  height={96}
                   className="w-64 h-64 rounded-full object-cover shadow-xl"
                 />
               </div>
@@ -69,16 +72,20 @@ function App() {
             {/* Bottom food images - superposed */}
             <div className="flex space-x-8">
               <div className="w-28 h-28 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center border-3 border-white/30 shadow-xl">
-                <img 
+                <Image 
                   src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" 
                   alt="Avocado toast" 
+                  width={96}
+                  height={96}
                   className="w-24 h-24 rounded-full object-cover"
                 />
               </div>
               <div className="w-24 h-24 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-xl border-2 border-white/50">
-                <img 
+                <Image 
                   src="https://images.pexels.com/photos/1640775/pexels-photo-1640775.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" 
                   alt="Healthy bowl" 
+                  width={96}
+                  height={96}
                   className="w-20 h-20 rounded-full object-cover"
                 />
               </div>

@@ -235,7 +235,7 @@ export default function ManagerDashboard() {
               </div>
               <p className="text-white/80 text-xs mb-1">Commandes</p>
               <p className="text-2xl font-bold text-white">{todayOrders.length}</p>
-              <p className="text-blue-300 text-xs">Aujourd'hui</p>
+              <p className="text-blue-300 text-xs">Aujourd&apos;hui</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-white/20 text-center min-w-[140px]">
